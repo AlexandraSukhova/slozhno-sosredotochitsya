@@ -1,0 +1,68 @@
+/*
+  Специально для тёмной темы при наличии класса,
+  здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+:root .theme_dark {
+  --main-font-family: "IBM Plex mono", sans-serif;
+  --bg-color: #000028;
+  --bg-image: url(./images/cover-image-dark.png);
+  --accent-color: #ff0070;
+  --main-title-color: #db00ff;
+  --title-decor-color: #000028;
+  --text-color: #f1b2ce;
+  --text-shadow: 4px 4px 0 var(--accent-color);
+  --padding-wrap: 0.625rem;
+  --main-subtitle-size: clamp(22.1875rem, 19.1945rem + 12.77vw, 30.6875rem);
+  --main-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --page-blocks-gap: 2.5rem;
+  --section-gap: 3.125rem;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    --main-font-family: "IBM Plex mono", sans-serif;
+    --bg-color: #000028;
+    --bg-image: url(./images/cover-image-dark.png);
+    --accent-color: #ff0070;
+    --main-title-color: #db00ff;
+    --title-decor-color: #000028;
+    --text-color: #f1b2ce;
+    --text-shadow: 4px 4px 0 var(--accent-color);
+    --padding-wrap: 0.625rem;
+    --main-subtitle-size: clamp(22.1875rem, 19.1945rem + 12.77vw, 30.6875rem);
+    --main-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    --page-blocks-gap: 2.5rem;
+    --section-gap: 3.125rem;
+  }
+}
+
+@media (width >= 768px) {
+
+  @media (prefers-color-scheme: dark) {
+
+    :root {
+      --padding-wrap: 1.25rem;
+      --page-blocks-gap: 3.75rem;
+      --section-gap: 5rem;
+      --main-title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    }
+  }
+
+  :root .theme_dark {
+    --padding-wrap: 1.25rem;
+    --page-blocks-gap: 3.75rem;
+    --section-gap: 5rem;
+    --main-title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+.page.theme_dark {
+  background-image: var(--bg-image);
+  /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
+}
