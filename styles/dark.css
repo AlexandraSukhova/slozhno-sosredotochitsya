@@ -7,7 +7,7 @@
 :root .theme_dark {
   --main-font-family: "IBM Plex mono", sans-serif;
   --bg-color: #000028;
-  --bg-image: url(../../images/cover-image-dark.png);
+  --bg-image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
   --main-title-color: #db00ff;
   --title-decor-color: #000028;
@@ -25,7 +25,7 @@
   :root {
     --main-font-family: "IBM Plex mono", sans-serif;
     --bg-color: #000028;
-    --bg-image: url(../../images/cover-image-dark.png);
+    --bg-image: url(../images/cover-image-dark.png);
     --accent-color: #ff0070;
     --main-title-color: #db00ff;
     --title-decor-color: #000028;
@@ -36,6 +36,10 @@
     --main-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     --page-blocks-gap: 2.5rem;
     --section-gap: 3.125rem;
+  }
+
+  .decoration-element {
+    display: flex;
   }
 }
 
