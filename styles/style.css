@@ -176,6 +176,10 @@
   color: var(--text-color);
 }
 
+.section__title {
+  grid-column-start: span 2;
+}
+
 .description__block {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));
@@ -308,6 +312,10 @@
     justify-self: end;
     inline-size: 50%;
     margin-block-start: 5.5%;
+  }
+
+  .section__title {
+    grid-column-start: span 1;
   }
 
   .images__list {

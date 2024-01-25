@@ -80,5 +80,5 @@
 }
 
 .theme_light .accent-text {
-  --accent-color: var(--text-color);
+  --accent-color: #353430;
 }
