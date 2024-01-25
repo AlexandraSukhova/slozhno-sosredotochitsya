@@ -295,7 +295,7 @@
 /* Media */
 
 @media (width = 768px) {
-  
+
   .description__block {
     column-gap: 2.25rem;
   }
