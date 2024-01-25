@@ -50,6 +50,10 @@
     color: var(--text-color);
   }
 
+  .theme_auto .header__theme-menu-button {
+    color: var(--text-color);
+  }
+
   .theme_auto .decorated-zone::before,
   .theme_auto .decorated-zone::after,
   .theme_auto .header__theme-menu-button:hover,
