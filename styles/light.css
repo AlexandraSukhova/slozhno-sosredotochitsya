@@ -5,7 +5,7 @@
 */
 
 :root .theme_light {
-  --main-font-family: "IBM Plex mono", sans-serif;
+  --main-font-family: "IBM Plex mono", monospace;
   --bg-color: #fff1f7;
   --bg-image: url(../images/cover-image-light.png);
   --accent-color: #ff8dcb;
@@ -23,7 +23,7 @@
 @media (prefers-color-scheme: light) {
 
   :root {
-    --main-font-family: "IBM Plex mono", sans-serif;
+    --main-font-family: "IBM Plex mono", monospace;
     --bg-color: #fff1f7;
     --bg-image: url(../images/cover-image-light.png);
     --accent-color: #ff8dcb;
@@ -49,13 +49,20 @@
   .theme_auto .accent-text {
     color: var(--text-color);
   }
-  
-  .theme_auto .header__theme-menu-button {
-    color: var(--text-color)
-  }
-  
+
+  .theme_auto .decorated-zone::before,
+  .theme_auto .decorated-zone::after,
+  .theme_auto .header__theme-menu-button:hover,
   .theme_auto .header__theme-menu-button_active {
     border-color: var(--text-color);
+  }
+
+  .theme_auto .header__theme-menu-button:focus-visible {
+    border-block-end-color: var(--text-color);
+  }
+
+  .theme_auto .header__theme-menu-button:hover {
+    border-color: rgba(50, 49, 45, 0.40);
   }
 }
 
@@ -100,6 +107,17 @@
   color: var(--text-color)
 }
 
+.theme_light .decorated-zone::before,
+.theme_light .decorated-zone::after,
 .theme_light .header__theme-menu-button_active {
   border-color: var(--text-color);
+}
+
+.theme_light .header__theme-menu-button:hover {
+  border-color: rgba(50, 49, 45, 0.40);
+}
+
+
+.theme_light .header__theme-menu-button:focus-visible {
+  border-block-end-color: var(--text-color);
 }
