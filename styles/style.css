@@ -351,9 +351,6 @@
   }
 
   .horizontal-block .description__block-content-wrapper {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(calc(315 / 1024 * 100%), 1fr)
-    );
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   }
 }
