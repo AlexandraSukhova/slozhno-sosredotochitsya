@@ -2,6 +2,7 @@
 
 .page {
   inline-size: 100%;
+  block-size: 100vh;
   display: grid;
   grid-template-columns: minmax(100%, max-content);
   row-gap: var(--page-blocks-gap);
@@ -43,7 +44,7 @@
   inline-size: 100%;
   block-size: max(668px, 100vh);
   display: grid;
-  grid-template-rows: repeat(3, calc(100vh / 3 - var(--padding-wrap)));
+  grid-template-rows: 1fr min-content 1fr;
   grid-template-columns: minmax(100%, max-content);
   align-items: center;
   justify-content: center;
@@ -113,8 +114,6 @@
   grid-row-start: 1;
   grid-column-start: 1;
   justify-self: end;
-  align-self: end;
-  margin-block-end: 7.5dvh;
 }
 
 .header__theme-menu-list {
@@ -152,8 +151,6 @@
 .header__subtitle {
   grid-row-start: 3;
   grid-column-start: 1;
-  align-self: start;
-  margin-block-start: 40px;
   display: flex;
   flex-direction: column;
   inline-size: var(--main-subtitle-size);
@@ -223,20 +220,21 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  row-gap: calc(var(--padding-wrap) - 3px);
+  row-gap: var(--padding-wrap);
 }
 
 .images__list {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-  gap: 0.3rem;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, max-content));
+  gap: var(--padding-wrap);
 }
 
 .image-item {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  display: block;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -302,10 +300,6 @@
 
 @media (width >= 768px) {
 
-  .header__theme-menu {
-    margin-block-end: 5dvh;
-  }
-
   .header__title {
     margin-inline-start: -2.35%;
   }
@@ -320,12 +314,7 @@
   }
 
   .images__list {
-    grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));
-    gap: 1.25rem;
-  }
-
-  .image-item {
-    object-fit: cover;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   }
 
   .image__list-item:nth-child(1) {
@@ -349,10 +338,6 @@
 
   .header__title {
     margin-inline-start: -1.8%;
-  }
-
-  .header__subtitle {
-    margin-block-start: 50px;
   }
 
   .header__theme-menu {
