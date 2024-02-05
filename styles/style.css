@@ -9,7 +9,7 @@
   grid-auto-flow: row;
   grid-auto-columns: minmax(min-content, max-content);
   justify-content: center;
-  background-color: var(--bg-collor);
+  background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-position: center;
   background-repeat: no-repeat;
